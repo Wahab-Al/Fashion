@@ -22,3 +22,11 @@ MIT License
 Clone the repository:
 ```bash
 git clone https://github.com/Wahab-Al/Prime-Universal-Store.git
+
+## Navigate to the project directory: 📂
+cd PrimeUniversalStore
+
+## Run the application: ▶️
+npm install
+
+npm run dev
