@@ -87,7 +87,8 @@
 }
 
 .nav-link {
-  color: #dddddddc !important; ;
+  color: #dddddddc !important; 
+  cursor: pointer;
 }
 
 .active {

@@ -8,15 +8,16 @@ import babyClothes from '../../../assets/img/quickViews/babyClothes.jpg'
 import babyShoes from '../../../assets/img/quickViews/babyShoes.jpg'
 import womenJeans from '../../../assets/img/quickViews/womenJeans.jpg'
 import Access from '../../../assets/img/quickViews/Access.jpg'
-
+import { useNavigate } from 'react-router';
 
 
 export default function QuickView() {
+  const navigate = useNavigate()
   return (
     <>
-      <div className="featured-courses-bg my-4">
+      <div className="trending-Items-bg my-4">
         {/*  */}
-        <section className="container-fluid featured-Courses">
+        <section className="container-fluid trending-Items">
           <div className="card border-0 bg-black bg-gradient py-3 mb-3 text-center text-light shadow" style={{ width: "100%" }}>
             <div className="card-body">
               <h5 className="card-title text-uppercase fw-bold fs-3">
@@ -27,11 +28,11 @@ export default function QuickView() {
         </section>
         {/*  */}
 
-        <div className="featured-Courses-bg">
+        <div className="trending-Items-bg">
           <section className="w-100 d-flex flex-wrap justify-content-center align-items-center gap-2">
             
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={WomanCoats} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -41,11 +42,11 @@ export default function QuickView() {
                 <p className="card-text">Experience pure luxury with our silk-finish night collection.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={MenJeans} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -55,11 +56,11 @@ export default function QuickView() {
                 <p className="card-text">A timeless classic designed for the modern street-style enthusiast.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={MenShoes} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -69,11 +70,11 @@ export default function QuickView() {
                 <p className="card-text">Premium Italian leather meets ultimate everyday comfort.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={Dress1} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -83,11 +84,11 @@ export default function QuickView() {
                 <p className="card-text">Light, breathable, and perfect for your next sunny getaway.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={babyClothes} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -97,11 +98,11 @@ export default function QuickView() {
                 <p className="card-text">The foundation of every wardrobe. 100% organic premium cotton.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={babyShoes} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -111,11 +112,11 @@ export default function QuickView() {
                 <p className="card-text">Versatile footwear designed to keep up with your city lifestyle.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*  */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={womenJeans} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -125,11 +126,11 @@ export default function QuickView() {
                 <p className="card-text">Cozy up in style with our hand-knitted seasonal textures.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
             {/*   */}
-            <div className="card course-card position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
+            <div className="card item-card  position-relative shadow border-0 m-xl-3" style={{ width: "18rem" }}>
               <img src={Access} alt="" className="card-img-top" />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
@@ -139,7 +140,7 @@ export default function QuickView() {
                 <p className="card-text">Organize your elegance with our premium velvet-lined cases.</p>
               </div>
               <button className='cart-btn-out'>Cart</button>
-              <button className='view-btn-out'>view</button>
+              <button className='view-btn-out' onClick={()=>navigate('/item')}>view</button>
             </div>
 
           </section>

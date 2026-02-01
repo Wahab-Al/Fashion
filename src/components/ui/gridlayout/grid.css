@@ -1,12 +1,18 @@
 
 .most-bought {
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
-    grid-template-rows: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 130px) !important;
     gap: 8px;
+    max-width: 1150px;
     overflow: hidden;
 }
     
+@media (min-width:768px) and (max-width: 991px) {
+    .most-bought {
+        grid-template-rows: repeat(5, 100px) !important;
+    }
+}
 /* .most-bought:hover{
     cursor: pointer;
 } */

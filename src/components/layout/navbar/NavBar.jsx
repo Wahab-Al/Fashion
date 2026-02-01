@@ -4,23 +4,23 @@ import searchIcon from '../../../assets/img/icon-search.png'
 import cartIcon from '../../../assets/img/icons-cart.png'
 import fingerIcon from '../../../assets/img/icons-finger.png'
 import userIcon from '../../../assets/img/icon-user.png'
-
-
+import { useNavigate } from 'react-router'
 
 
 export default function NavBar() {
+    const navigate = useNavigate()
     return (
         <>
             <div className='top-header'>
                 <h6 className='top-header-h6 text-uppercase ms-2 p-1'>upto 30% off on all styles, <a href="" className='text-lowercase text-decoration-none text-dark'>Click Here For<img src={fingerIcon} width={20} height={20} alt=""/> <span className='top-header-link'>More Details</span></a></h6>
                 <div className='top-header-right'>
-                    <a href=""><img src={userIcon} alt="" width={35} height={35} className='userIcon'/></a>
-                    <button className='top-btn-header rounded rounded-4 ms-2'>Cart<img className='CartIconImg' src={cartIcon} alt="CartIcon" width={20} height={20}/></button>
+                    <a href="" onClick={()=> navigate('/register')}><img src={userIcon} alt="" width={35} height={35} className='userIcon'/></a>
+                    <button className='top-btn-header rounded rounded-4 ms-2'  onClick={()=> navigate('/cart')}>Cart<img className='CartIconImg' src={cartIcon} alt="CartIcon" width={20} height={20}/></button>
                 </div>
             </div>
             <nav className="navbar navbar-expand-lg bg-body-transparent mt-5">
                 <div className="container-fluid">
-                    <a className="navbar-brand mt-1 fs-3" href="#">Fash<span><img className='LogoIconImg rounded' src={LogFashion} alt="LogoIcon" width={35} height={35}/></span>ion</a>
+                    <a className="navbar-brand mt-1 fs-3" href="#" onClick={()=>navigate('/')}>Fash<span><img className='LogoIconImg rounded' src={LogFashion} alt="LogoIcon" width={35} height={35}/></span>ion</a>
                     <form className="d-flex mt-1 search-form" role="search">  
                         <img className='searchIcon p-1 rounded' src={searchIcon} alt="LogoIcon" width={25} height={25}/>
                         <button className="btn btn-outline-transparent search-btn border border-0 ms-1" type="submit">Search</button>
@@ -31,10 +31,10 @@ export default function NavBar() {
                     <div className="collapse navbar-collapse container-fluid mt-3" id="navbarSupportedContent">
                         <ul className="navbar-nav nav-list bg-transparent rounded ms-auto mb-2 mb-lg-0">
                             <li className="nav-item mb-1">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page" href="#" onClick={()=>navigate('/')}>Home</a>
                             </li>
                             <li className="nav-item mb-1">
-                                <a className="nav-link " href="#">about</a>
+                                <a className="nav-link " href="#" onClick={()=>navigate('/about')}>about</a>
                             </li>
                             <li className="nav-item dropdown mb-1">
                                 <a className="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +48,7 @@ export default function NavBar() {
                                 </ul>
                             </li>
                             <li className="nav-item mb-1">
-                                <a className="nav-link" aria-disabled="true">Contact</a>
+                                <a className="nav-link" onClick={()=>navigate('/contact')} aria-disabled="true">Contact</a>
                             </li>
                         </ul>                   
                     </div>

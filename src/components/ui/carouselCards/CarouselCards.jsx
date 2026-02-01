@@ -13,16 +13,22 @@ import mstyle from '../../../assets/img/products-carousel/m-style.jpg'
 import mstyle1 from '../../../assets/img/products-carousel/m-style1.jpg'
 import mstyle3 from '../../../assets/img/products-carousel/m-style3.jpg'
 
+import coat from '../../../assets/img/quickViews/woman-coats1.jpg'
+import coat1 from '../../../assets/img/item/woman-coats2.jpg'
+import coat2 from '../../../assets/img/item/woman-coats3.jpg'
+import coat3 from '../../../assets/img/item/woman-coats4.jpg'
 
 
 import Prev from '../../../assets/img/products-carousel/arrow-prev.svg'
 import Next from '../../../assets/img/products-carousel/arrow-next.svg'
 
-
+import { useNavigate } from 'react-router'
 
 
 
 export default function CarouselCards() {
+
+    const navigate = useNavigate()
     const [offset, setOffset] = useState(0);
     const containerRef = useRef(null);
 
@@ -71,7 +77,7 @@ export default function CarouselCards() {
                         }}
                     >
                         {/* Start Card 1 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
                                     <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
@@ -86,7 +92,7 @@ export default function CarouselCards() {
                         {/* End Card 1 */}
 
                         {/* Card 2 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
                                     <img src={Dress3} className="img-fluid  w-100 h-100" alt="..."/>
@@ -100,7 +106,7 @@ export default function CarouselCards() {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
                                     <img src={mstyle} className="img-fluid  w-100 h-100" alt="..."/>
@@ -114,21 +120,21 @@ export default function CarouselCards() {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
-                                    <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
+                                    <img src={coat} className="img-fluid  w-100 h-100" alt="..."/>
                                 </div>
                                 <div className="col-md-3 col-12 d-flex d-md-block overflow-hidden small-Img-container">
-                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_2} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_1} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_4} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={coat1} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={coat2} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={coat3} alt="" /></div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Card 5 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        {/* Start Card 5 */}
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
                                     <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
@@ -140,45 +146,46 @@ export default function CarouselCards() {
                                 </div>
                             </div>
                         </div>
+                        {/* End Card 5 */}
 
                         {/* Card 6 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
-                                    <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
+                                    <img src={Dress3} className="img-fluid  w-100 h-100" alt="..."/>
                                 </div>
                                 <div className="col-md-3 col-12 d-flex d-md-block overflow-hidden small-Img-container">
-                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_2} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_1} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_4} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={Dress2} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={Dress} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={Dress2} alt="" /></div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Card 7 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
-                                    <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
+                                    <img src={mstyle} className="img-fluid  w-100 h-100" alt="..."/>
                                 </div>
                                 <div className="col-md-3 col-12 d-flex d-md-block overflow-hidden small-Img-container">
-                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_2} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_1} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_4} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={mstyle1} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={mstyle3} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={mstyle1} alt="" /></div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Card 8 */}
-                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0">
+                        <div className="card col-12 col-md-6 col-lg-3 col-xl-2 overflow-hidden m-3 pic border border-0" onClick={()=>navigate('/item')}>
                             <div className="row g-0 cardCarousel">
                                 <div className="col-md-9 col-12  p-md-0 overflow-hidden bigImg-container">
-                                    <img src={Style1} className="img-fluid  w-100 h-100" alt="..."/>
+                                    <img src={coat} className="img-fluid  w-100 h-100" alt="..."/>
                                 </div>
                                 <div className="col-md-3 col-12 d-flex d-md-block overflow-hidden small-Img-container">
-                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_2} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_1} alt="" /></div>
-                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={style1_4} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mb-md-1 w-100 overflow-hidden"><img className='w-100' src={coat1} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 w-100 overflow-hidden"><img className='w-100' src={coat2} alt="" /></div>
+                                    <div className="secondary-pics ms-md-1 mt-md-1 w-100 overflow-hidden"><img className='w-100' src={coat3} alt="" /></div>
                                 </div>
                             </div>
                         </div>

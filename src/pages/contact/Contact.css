@@ -1,0 +1,129 @@
+
+.map {
+  width:500px; 
+  height:300px 
+}
+
+.contact-main {
+  margin-top: 290px;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .address-div {
+    width: 40%;
+    font-size: small;
+  }
+
+  .address-map {
+    width: 60%;
+  }
+  
+  .address-map iframe {
+    width: 90%;
+    margin-left: 50px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .map {
+    width: 100%;
+  }
+}
+
+.contact-section {
+  position: relative;
+  padding: 80px 0;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-attachment: fixed !important; 
+  background: url('../../assets/img/kids2.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.63);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  z-index: 3;
+}
+
+.form-title {
+  font-weight: bolder !important;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #fcfaf9;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.form-input {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  outline: none !important;
+}
+
+.form-textarea {
+  grid-column: span 3;
+  height: 120px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  resize: none;
+  outline: none !important;
+}
+
+.submit-btn {
+  grid-column: 1;
+  width: 150px;
+  padding: 12px;
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-textarea {
+    grid-column: span 1;
+  }
+}
+
+.contact-main span {
+  color: #ff7b00 !important;
+}
+
+.contact-main p {
+  font-size: smaller !important;
+  font-weight: 100 !important;
+  color: rgba(17, 17, 17, 0.623);
+}

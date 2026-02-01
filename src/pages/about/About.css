@@ -1,0 +1,140 @@
+
+.services-container {
+  margin-top: 300px !important;
+}
+
+/* Team section */ 
+
+.team-section {
+  background-color: #fff;
+}
+
+.team-card {
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px; 
+  cursor: pointer;
+}
+
+.team-img-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: visible; 
+}
+
+.team-img-wrapper img {
+  border-radius: 8px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.team-info-box {
+  position: absolute;
+  bottom: -40px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 85%;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.team-socials a {
+  color: #333;
+  margin: 0 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.team-socials a:hover {
+  color: #ff7b00;
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    margin-bottom: 80px;
+  }
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.team-card:hover::before {
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  background: var(--item-card-hover-color2-color);
+  border-radius: 2px;
+  z-index: 1;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.team-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-card:hover::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--item-card-hover-color-color);
+    border-radius: 2px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* features-section */
+
+.features-section {
+  min-width: 100% !important;
+  min-height: 600px;
+  background-image: url('../../assets/img/capability/capa1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px 5px;
+  margin-bottom: 50px;
+}
+
+.features-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.603); 
+  z-index: 1;
+}
+
+.features-section h4 {
+  color: #ff7b009c !important;
+}
+
+.feature-item {
+  transition: transform 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateX(10px);
+}

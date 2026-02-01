@@ -8,6 +8,7 @@
   background-size: cover;
   position: relative;
   overflow-x: hidden;
+  margin-top: 190px;
 }
 
 .main-login-page::before {
@@ -23,12 +24,10 @@
   pointer-events: none;
 }
 
-
 .login__form-container {
   position: relative;
   z-index: 1;
 }
-
 
 .login-form-box {
   max-width: 450px;
@@ -37,11 +36,9 @@
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-
 .login-title, .login-link {
   color: rgb(255, 123, 0) !important;
 }
-
 
 .login-inp {
   background: radial-gradient(circle at top left, #1e272e, #000) !important;
@@ -50,7 +47,6 @@
   transition: all 0.3s ease;
 }
 
-
 .login-inp:focus {
   outline: none !important;
   box-shadow: 0 5px 15px rgba(255, 99, 71, 0.2) !important;
@@ -58,11 +54,9 @@
   transform: translateY(-2px);
 }
 
-
 .login-inp::placeholder {
   color: rgba(240, 248, 255, 0.6) !important;
 }
-
 
 .login-submit-btn {
   background: radial-gradient(circle at top left, rgba(240, 248, 255, 0.753), #1e272e, #000);
@@ -70,25 +64,20 @@
   transition: 0.3s;
 }
 
-
 .login-submit-btn:hover {
   filter: brightness(1.2);
   transform: scale(1.02);
 }
-
-
 
 @keyframes loginFadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-
 .login-input-group, .login-submit-btn {
   opacity: 0;
   animation: loginFadeIn 0.5s ease-out forwards;
 }
-
 
 .login-input-group:nth-child(2) { animation-delay: 0.2s; }
 .login-input-group:nth-child(3) { animation-delay: 0.3s; }

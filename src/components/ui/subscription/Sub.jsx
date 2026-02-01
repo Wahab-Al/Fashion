@@ -11,7 +11,7 @@ export default function Sub() {
             <p className='ms-1'>Subscribe and get notified at first on the latest update and offers!</p>
             <div className="inp-btn-container">
               <input type="text" placeholder=' your email here' className='join-inp ps-3 '/>
-              <button className='join-btn '>join</button>
+              <button className='join-btn'>join</button>
             </div>
           </div>
         </div>

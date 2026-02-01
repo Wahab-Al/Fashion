@@ -13,29 +13,29 @@ export default function Categories () {
             <div className='container-fluid'>
                 <h3 className='text-center'>Our <span className='categories-title'>Categories</span></h3>
                 <div className='categories row justify-content-center align-items-center d-flex mt-4'>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Suits} width={155} height={155}  alt="" className='category-img'/>
-                        <h6>Suits</h6>
+                        <h6 className='category-h6'>Suits</h6>
                     </div>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Shoes} width={155} height={155}  alt="" className=' category-img'/>
-                        <h6>Shoes</h6>
+                        <h6 className='category-h6'>Shoes</h6>
                     </div>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Fragrances} width={155} height={155}  alt="" className='category-img '/>
-                        <h6>Fragrances</h6>
+                        <h6 className='category-h6'>Fragrances</h6>
                     </div>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Watches} width={155} height={155}  alt="" className='category-img '/>
-                        <h6>Watches</h6>
+                        <h6 className='category-h6'>Watches</h6>
                     </div>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Accessories} width={155} height={155}  alt="" className=' category-img'/>
-                        <h6>Accessories</h6>
+                        <h6 className='category-h6'>Accessories</h6>
                     </div>
-                    <div className='col-4 col-md-3 col-lg-2 mb-2 '>
+                    <div className='col-4  col-md-3 col-lg-2 mb-2 '>
                         <img src={Bags} width={155} height={155}  alt="" className=' category-img'/>
-                        <h6>Bags</h6>
+                        <h6 className='category-h6'>Bags</h6>
                     </div>
                 </div>
             </div>

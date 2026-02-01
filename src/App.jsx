@@ -14,29 +14,59 @@ import Promo from './components/ui/promo/Promo'
 import Customer from './components/ui/customer/Customer'
 import Sub from './components/ui/subscription/Sub'
 import QuickView from './components/ui/quickView/QuickView'
-import Register from './pages/register/register'
-import Login from './pages/login/login'
 
+
+import { Route, Routes } from 'react-router'
+
+import React, { Suspense, lazy } from 'react';
+
+
+const Register = lazy(() => import('./pages/register/register'));
+const Login = lazy(() => import('./pages/login/login'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
+const About = lazy(() => import('./pages/about/About'));
+const Item = lazy(() => import('./pages/item/Item'));
+const Cart = lazy(() => import('./pages/cart/Cart'));
 
 function App() {
   
   return (
     <>
       <NavBar />
-      <MainI />
-      <Hero />
-      <QuickView />
-      <Grid />
-      <CarouselCards />
-      <PromotionBanner1 />
-      <Promo />
-      <PromotionBanner2 />
-      <Premium />
-      <Customer />
-      <WhyFashion />
-      <Sub />
-      <Footer />
-
+      <Suspense fallback={
+        <div className="loading-container">
+          <div className="spinner-border custom-spinner" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <h5 className="mt-3 fw-light text-secondary">Getting things ready...</h5>
+        </div>
+      }>
+        <Routes>
+          <Route path='/' element={
+            <>
+              <MainI />
+              <Hero />
+              <QuickView />
+              <Grid />
+              <CarouselCards />
+              <PromotionBanner1 />
+              <Promo />
+              <PromotionBanner2 />
+              <Premium />
+              <Customer />
+              <WhyFashion />
+              <Sub />
+            </>
+          }/>
+          <Route path='/register' element={ <Register /> } />
+          <Route path='/login' element={ <Login />}/>
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/item' element={<Item />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
+        <Footer />
+      </Suspense>
     </>
   )
 }

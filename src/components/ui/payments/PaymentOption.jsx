@@ -1,4 +1,3 @@
-import React from 'react'
 import Apple from '../../../assets/img/payments/apple-pay.svg'
 import MasterCard from '../../../assets/img/payments/mastercard.svg'
 import Google from '../../../assets/img/payments/google-pay.svg'

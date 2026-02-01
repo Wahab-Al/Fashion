@@ -1,0 +1,27 @@
+.cart-container {
+  margin-top: 300px !important;
+  margin-bottom: 200px !important;
+}
+
+.text-orange {
+    color: #ff7b00 !important;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #e66e00 !important;
+    transform: translateY(-2px);
+}
+
+.rounded-pill {
+    background: #fff;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #ff7b00 !important;
+}

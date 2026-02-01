@@ -10,6 +10,7 @@
 [![Redux](https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white)](https://redux.js.org/)
 [![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-764ABC?logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
 [![SweetAlert2](https://img.shields.io/badge/SweetAlert2-JS%20popup%20library-purple?style=flat-square)](https://sweetalert2.github.io/)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=flat-square&logo=githubactions&logoColor=white)
 
 
 ---
@@ -21,7 +22,7 @@ MIT License
 ## Installation: 
 Clone the repository:
 ```bash
-git clone https://github.com/Wahab-Al/Prime-Universal-Store.git
+git clone https://github.com/Wahab-Al/Fashion.git
 
 ## Navigate to the project directory: 📂
 cd PrimeUniversalStore
