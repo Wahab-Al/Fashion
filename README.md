@@ -12,8 +12,19 @@
 [![SweetAlert2](https://img.shields.io/badge/SweetAlert2-JS%20popup%20library-purple?style=flat-square)](https://sweetalert2.github.io/)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=flat-square&logo=githubactions&logoColor=white)
 
+---
+# Fashion - Modern E-Commerce Storefront: 🛍️👗
+**Fashion** a responsive e-commerce web application built with the latest React 19, Bootstrap 5 and Vite. This project has a scalable architecture, centralized data management, and focuses on a seamless shopping experience for the fashion industry, emphasizing speed, scalability, and a refined UI/UX.
+
+## Key Features & Architecture: 🛠️
+`Optimized Rendering`: Built with `React 19`
+
+`Responsive Engine`: Implements a Mobile-First approach using `Bootstrap 5` and custom `CSS3` for flawless display across all devices.
+
+`Modern Routing`: by `React Router` v7 and a custom `ScrollToTop` logic for enhanced `SPA UX`.
 
 ---
+
 ## License: 📄
 MIT License
 
@@ -25,7 +36,7 @@ Clone the repository:
 git clone https://github.com/Wahab-Al/Fashion.git
 
 ## Navigate to the project directory: 📂
-cd PrimeUniversalStore
+cd Fashion
 
 ## Run the application: ▶️
 npm install
