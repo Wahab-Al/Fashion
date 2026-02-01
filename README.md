@@ -1,4 +1,5 @@
-# Prime Universal Store
+# Fashion - Modern E-Commerce Storefront: 🛍️👗
+**Fashion** a responsive e-commerce web application built with the latest React 19, Bootstrap 5 and Vite. This project has a scalable architecture, centralized data management, and focuses on a seamless shopping experience for the fashion industry, emphasizing speed, scalability, and a refined UI/UX.
 
 ---
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -12,9 +13,11 @@
 [![SweetAlert2](https://img.shields.io/badge/SweetAlert2-JS%20popup%20library-purple?style=flat-square)](https://sweetalert2.github.io/)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=flat-square&logo=githubactions&logoColor=white)
 
+## Soon:
+[![Docker](https://img.shields.io/badge/docker-coming_soon-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
+
 ---
-# Fashion - Modern E-Commerce Storefront: 🛍️👗
-**Fashion** a responsive e-commerce web application built with the latest React 19, Bootstrap 5 and Vite. This project has a scalable architecture, centralized data management, and focuses on a seamless shopping experience for the fashion industry, emphasizing speed, scalability, and a refined UI/UX.
+
 
 ## Key Features & Architecture: 🛠️
 `Optimized Rendering`: Built with `React 19`
