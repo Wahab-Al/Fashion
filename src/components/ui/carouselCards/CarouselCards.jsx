@@ -21,7 +21,6 @@ import coat1 from '../../../assets/img/item/woman-coats2.jpg'
 import coat2 from '../../../assets/img/item/woman-coats3.jpg'
 import coat3 from '../../../assets/img/item/woman-coats4.jpg'
 
-
 import WomanCoats from '../../../assets/img/quickViews/woman-coats1.jpg'
 import MenJeans from '../../../assets/img/quickViews/MenJeans.jpg'
 import MenShoes from '../../../assets/img/quickViews/MenShoes.jpg'
