@@ -19,6 +19,7 @@ import QuickView from './components/ui/quickView/QuickView'
 import { Route, Routes } from 'react-router'
 
 import React, { Suspense, lazy } from 'react';
+import ScrollToTop from './components/ui/ScrollToTop'
 
 
 const Register = lazy(() => import('./pages/register/register'));
@@ -27,12 +28,15 @@ const Contact = lazy(() => import('./pages/contact/Contact'));
 const About = lazy(() => import('./pages/about/About'));
 const Item = lazy(() => import('./pages/item/Item'));
 const Cart = lazy(() => import('./pages/cart/Cart'));
+const NotFound = lazy(() => import('./pages/not_found_page/NotFound'))
+
 
 function App() {
   
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <Suspense fallback={
         <div className="loading-container">
           <div className="spinner-border custom-spinner" role="status">
@@ -62,8 +66,9 @@ function App() {
           <Route path='/login' element={ <Login />}/>
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
-          <Route path='/item' element={<Item />} />
+          <Route path='/item/:slug' element={<Item />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='*' element= {<NotFound />} />
         </Routes>
         <Footer />
       </Suspense>

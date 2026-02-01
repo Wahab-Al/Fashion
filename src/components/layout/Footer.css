@@ -64,3 +64,10 @@
 .allRights span {
     color: #e66327 !important;
 }
+
+@media (max-width: 575px) {
+    .footer-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

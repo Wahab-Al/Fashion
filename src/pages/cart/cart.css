@@ -1,6 +1,6 @@
 .cart-container {
-  margin-top: 300px !important;
-  margin-bottom: 200px !important;
+    margin-top: 300px !important;
+    margin-bottom: 200px !important;
 }
 
 .text-orange {
@@ -24,4 +24,26 @@ input:focus {
     outline: none !important;
     box-shadow: none !important;
     border-color: #ff7b00 !important;
+}
+
+@media (max-width: 500px) {
+    .item-in-cart {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .item-in-cart div {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .img-cart {
+        margin-bottom: 10px !important;
+        /* display: none; */
+    }
+}
+
+@media (max-width: 320px) {
+    .img-cart {
+        display: none !important;
+    }
 }

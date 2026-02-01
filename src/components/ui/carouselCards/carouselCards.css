@@ -123,11 +123,11 @@
 .card {
     overflow: hidden;
 }
-.card img{
+.carousel-card-img-big, .carousel-card-img-small{
     transform: scale(1);
 }
 
-.card img:hover{
+.carousel-card-img-big:hover, .carousel-card-img-small:hover{
     transform: scale(1.2);
     transition: .3s ease-in-out;
 }

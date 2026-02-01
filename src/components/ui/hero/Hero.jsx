@@ -3,7 +3,7 @@ import Categories from '../categories/Categories'
 import TopSales from '../topSales/TopSales'
 import Grid from '../gridlayout/Grid'
 // import PaymentOption from '../payments/PaymentOption'
-import Carousel from '../carousel/Carousel'
+import ShopWithUsCarousel from '../shopWithUsCarousel/ShopWithUsCarousel'
 
 
 export default function Hero() {
@@ -11,7 +11,7 @@ export default function Hero() {
         <>
             <Categories />
             <TopSales />
-            <Carousel />
+            <ShopWithUsCarousel />
         </>
     )
 }

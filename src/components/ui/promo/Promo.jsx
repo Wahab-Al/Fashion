@@ -1,6 +1,6 @@
 import './Promo.css'
-import PromoVideoPasska from '../../../assets/promos/Fashion Ads _ Passa Silkwear.mp4'
-import PromoVideoSimmonds from '../../../assets/promos/simo.MP4'
+import PromoVideoPasska from '../../../assets/promos/Passa.mp4'
+import PromoVideoSimmonds from '../../../assets/promos/Simo.MP4'
 
 export default function Promo() {
   return (

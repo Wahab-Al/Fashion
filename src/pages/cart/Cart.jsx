@@ -48,8 +48,8 @@ const Cart = () => {
             <div className="card border-0 shadow-sm rounded-4 p-4">
               <h4 className="fw-bold mb-4">Shopping Cart</h4>
               {cartItems.map(item => (
-                <div key={item.id} className="row align-items-center mb-4 pb-3 border-bottom">
-                  <div className="col-2">
+                <div key={item.id} className="row item-in-cart align-items-center mb-4 pb-3 border-bottom">
+                  <div className="col-2 img-cart">
                     <img src={item.img} className="img-fluid rounded" alt={item.name} />
                   </div>
                   <div className="col-4">
@@ -79,7 +79,7 @@ const Cart = () => {
             </div>
           </div>
           <div className="col-lg-4">
-              {/* Summary Sidebar - Same as before */}
+              {/* Summary */}
               <div className="card border-0 shadow-sm rounded-4 p-4 bg-light">
                   <h5 className="fw-bold mb-4">Order Summary</h5>
                   <div className="d-flex justify-content-between mb-4 border-top pt-3">
@@ -87,7 +87,7 @@ const Cart = () => {
                       <span className="fw-bold fs-5 text-orange">${subtotal}</span>
                   </div>
                   <button className="btn w-100 rounded-pill py-3 fw-bold text-white shadow-sm border-0" style={{backgroundColor: '#ff7b00'}}>
-                      Checkout
+                    Checkout
                   </button>
               </div>
           </div>

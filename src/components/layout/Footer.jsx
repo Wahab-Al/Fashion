@@ -9,7 +9,7 @@ export default function Footer() {
         <>
             {/* <OurApps /> 
             <PaymentOption /> */}
-            <footer className="footer-section pt-5 pb-3">
+            <footer className="footer-section pt-5 pb-3 ">
             <div className="container">
                 <div className="row mb-5">
                 {/* Start: Brand Logo & Social Section */}
