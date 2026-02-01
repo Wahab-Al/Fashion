@@ -1,6 +1,4 @@
 import './Promo.css'
-import PromoVideoPasska from '../../../assets/promos/Passa.mp4'
-import PromoVideoSimmonds from '../../../assets/promos/Simo.MP4'
 
 export default function Promo() {
   return (
@@ -10,14 +8,14 @@ export default function Promo() {
           <div className="col-md-8 col-12"> 
             <div className="ratio ratio-21x9 h-100">
               <video autoPlay muted loop playsInline className="object-fit-cover">
-                <source src={PromoVideoPasska} type='video/mp4'/>
+                <source src="/promos/Passa.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
           <div className="col-md-4 col-12"> 
             <div className="ratio ratio-21x9 h-100">
               <video autoPlay muted loop playsInline preload="auto" className="object-fit-cover">
-                <source src={PromoVideoSimmonds} type='video/mp4'/>
+                <source src="/promos/Simo.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
