@@ -1,4 +1,4 @@
-import SuitImg from '../../../assets/img/Categories/Promotions/suit.avif'
+import SuitImg from '../../../assets/img/Categories/Promotions/suit.jpg'
 import './PromotionBanner.css'
 
 export default function PromotionBanner1() {

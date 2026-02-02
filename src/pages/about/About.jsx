@@ -1,7 +1,7 @@
 import navBack from '../../assets/img/team.jpg'
 import NavbarBackground from '../../components/layout/navbar/navbarBackground/NavbarBackground'
 import Manager from '../../assets/img/Team/Manager.jpg'
-import Designer from '../../assets/img/Team/Designer3.avif'
+import Designer from '../../assets/img/Team/Designer3.jpg'
 import Marketing from '../../assets/img/Team/Marketing.jpg'
 import './About.css'
 

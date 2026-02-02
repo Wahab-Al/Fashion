@@ -3,6 +3,7 @@
 // import OurApps from '../ui/ourApps/OurApps'
 import './Footer.css';
 import LogFashion from '../../assets/img/LogFashion.png'
+import { Link } from 'react-router';
 
 export default function Footer() {
     return (
@@ -21,10 +22,10 @@ export default function Footer() {
                     Discover the ultimate destination for luxury apparel and trend-setting styles. Elevate your wardrobe with our curated collections of premium clothing, footwear, and accessories. Experience high-end fashion with global delivery.
                     </p>
                     <div className="social-icons d-flex gap-2">
-                    <a href="#" className="social-link"><i className="fab fa-facebook-f"></i></a>
-                    <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
-                    <a href="#" className="social-link"><i className="fab fa-google-plus-g"></i></a>
-                    <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" className="social-link"><i className="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" className="social-link"><i className="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" className="social-link"><i className="fab fa-google-plus-g"></i></a>
+                    <a href="#" target="_blank" className="social-link"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 {/* End: Brand Logo & Social Section */}
@@ -38,10 +39,9 @@ export default function Footer() {
                         <h5 className="text-white mb-3 text-uppercase small fw-bold">Useful Links</h5>
                         <ul className="list-unstyled footer-links row">
                             <div className="col-6">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><Link to={'/'} href="#">Home</Link></li>
+                            <li><Link to={'/about'} href="#">About</Link></li>
+                            <li><Link to={'/contact'} href="#">Contact</Link></li>
                             </div>
                             <div className="col-6">
                             <li><a href="#">Careers</a></li>

@@ -4,12 +4,12 @@ import './carouselCards.css'
 
 //#region item images: 
 import Dress from '../../../assets/img/products-carousel/dress.webp'
-import Dress2 from '../../../assets/img/products-carousel/dress2.avif'
-import Dress3 from '../../../assets/img/products-carousel/dress3.avif'
+import Dress2 from '../../../assets/img/products-carousel/dress2.jpg'
+import Dress3 from '../../../assets/img/products-carousel/dress3.jpg'
 
 import Style1 from '../../../assets/img/products-carousel/style1.jpg'
 import style1_1 from '../../../assets/img/products-carousel/style1_1.jpg'
-import style1_2 from '../../../assets/img/products-carousel/style1_2.avif'
+import style1_2 from '../../../assets/img/products-carousel/style1_2.jpg'
 import style1_4 from '../../../assets/img/products-carousel/style1_4.jpg'
 
 import mstyle from '../../../assets/img/products-carousel/m-style.jpg'

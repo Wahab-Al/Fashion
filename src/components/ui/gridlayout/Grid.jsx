@@ -2,7 +2,7 @@ import React from 'react'
 import './grid.css'
 import brand from '../../../assets/img/most-bought/brand.jpg'
 import Boots from '../../../assets/img/most-bought/boots.jpg'
-import Accessor from '../../../assets/img/most-bought/Accessor.avif'
+import Accessor from '../../../assets/img/most-bought/Accessor.jpg'
 import cap from '../../../assets/img/most-bought/cap.jpg'
 import Drone from '../../../assets/img/most-bought/drone.jpg'
 

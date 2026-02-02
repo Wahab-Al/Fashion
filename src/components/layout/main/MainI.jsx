@@ -2,7 +2,7 @@ import collection from '../../../assets/img/top_header/collection/watch-man.png'
 import collection1 from '../../../assets/img/top_header/collection/wom-with-bag.png'
 import collection2 from '../../../assets/img/top_header/collection/man-complete-body.png'
 import collection3 from '../../../assets/img/top_header/collection/kids.png'
-import topHeader from '../../../assets/img/top_header/woman-suit.avif'
+import topHeader from '../../../assets/img/top_header/woman-suit.jpg'
 
 import './main.css'
 export default function MainI() {
