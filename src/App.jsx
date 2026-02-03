@@ -20,6 +20,7 @@ import { Route, Routes } from 'react-router'
 
 import React, { Suspense, lazy } from 'react';
 import ScrollToTop from './components/ui/ScrollToTop'
+import Logout from './pages/logout/logout'
 
 
 const Register = lazy(() => import('./pages/register/register'));
@@ -68,6 +69,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/item/:slug' element={<Item />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/logout' element={<Logout />} />
           <Route path='*' element= {<NotFound />} />
         </Routes>
         <Footer />

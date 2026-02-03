@@ -4,18 +4,63 @@ import searchIcon from '../../../assets/img/icon-search.png'
 import cartIcon from '../../../assets/img/icons-cart.png'
 import fingerIcon from '../../../assets/img/icons-finger.png'
 import userIcon from '../../../assets/img/icon-user.png'
-import { Link, useNavigate } from 'react-router'
-
+import { Link } from 'react-router'
+import { useState, useEffect } from 'react'
 
 export default function NavBar() {
-    const navigate = useNavigate()
+    const [cartCount, setCartCount] = useState(0);
+    const [currentUser, setCurrentUser] = useState(null);
+
+    const updateNavData = () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+        setCartCount(total);
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        setCurrentUser(user);
+    };
+    useEffect(() => {
+        updateNavData()
+        
+        const handleLogoutUI = () => {
+        setCurrentUser(null); 
+        setCartCount(0);      
+    }
+        window.addEventListener('cartUpdated', updateNavData)
+        window.addEventListener('userLoggedOut', handleLogoutUI)
+        window.addEventListener('userLoggedIn', updateNavData)
+        return () => {
+            window.removeEventListener('cartUpdated', updateNavData)
+            window.removeEventListener('userLoggedOut', handleLogoutUI)
+            window.removeEventListener('userLoggedIn', updateNavData)
+        }   
+    }, [])
+
+    
     return (
         <>
             <div className='top-header'>
                 <h6 className='top-header-h6 text-uppercase ms-2 p-1'>upto 30% off on all styles, <a href="" className='text-lowercase text-decoration-none text-dark'>Click Here For<img src={fingerIcon} width={20} height={20} alt=""/> <span className='top-header-link'>More Details</span></a></h6>
-                <div className='top-header-right'>
-                    <Link to={'/register'}><img src={userIcon} alt="" width={35} height={35} className='userIcon'/></Link>
-                    <Link to={'/cart'} className='top-btn-header rounded rounded-4 ms-2'>Cart<img className='CartIconImg' src={cartIcon} alt="CartIcon" width={20} height={20}/></Link>
+                <div className='top-header-right d-flex align-items-center'>
+                    {currentUser ? (
+                        <div className="d-flex align-items-center gap-2">
+                            <span className="welcome-text small fw-bold">Hi, {currentUser.name}</span>
+                            <Link to={'/logout'} className="text-danger small text-decoration-none">Logout</Link>
+                        </div>
+                    ) : (
+                        <Link to={'/register'}>
+                            <img src={userIcon} alt="Login" width={30} height={30} className='userIcon'/>
+                        </Link>
+                    )}
+                    <Link to={'/cart'} className='top-btn-header rounded rounded-4 ms-2 position-relative'>
+                        Cart
+                        <img className='CartIconImg ms-1' src={cartIcon} alt="CartIcon" width={20} height={20}/>
+                        {cartCount > 0 && (
+                            <span className="cart-counter position-absolute top-0 translate-middle badge rounded-pill" 
+                                style={{backgroundColor: 'rgb(255, 123, 0)', fontSize: '0.6rem'}}>
+                                {cartCount}
+                            </span>
+                        )}
+                    </Link>
                 </div>
             </div>
             <nav className="navbar navbar-expand-lg bg-body-transparent mt-5">

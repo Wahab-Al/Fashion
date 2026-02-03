@@ -5,7 +5,8 @@ import navBack from '../../assets/img/kidsFashion.jpg'
 
 import { useParams } from 'react-router'
 import { products } from '../../components/ui/carouselCards/CarouselCards'
-
+import Swal from 'sweetalert2'
+import { useState } from 'react'
 
 //#region convert rating from number to stars icon 
 const renderStars = (rating) => {
@@ -27,9 +28,46 @@ const renderStars = (rating) => {
 export default function Item() {
   const { slug } = useParams()
   const item = products.find(i => i.slug === slug)
+
+  // define quantity
+  const [quantity, setQuantity] = useState(1)
+
   if(!item) {
     return <div className="container py-5 text-center"><h1>Item Not Found</h1></div>
   }
+
+  const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || []
+    const existingItemIndex = cart.findIndex(i => i.id === item.id)
+    const qtyToAdd = parseInt(quantity)
+
+    if (existingItemIndex > -1) {
+      cart[existingItemIndex].quantity += qtyToAdd
+    } else {
+      cart.push({ ...item, quantity: qtyToAdd })
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart))
+    window.dispatchEvent(new Event('cartUpdated'))
+
+    Swal.fire({
+      title: 'Added Successfully!',
+      text: `${qtyToAdd} units of ${item.title} added to your bag.`,
+      icon: 'success',
+      iconColor: 'rgb(255, 123, 0)',
+      background: '#1a1a1a',
+      color: '#fff',
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.querySelector('.swal2-timer-progress-bar').style.backgroundColor = 'rgb(255, 123, 0)'
+      }
+    })
+  }
+
   return (
     <>
       <NavbarBackground img={navBack} />
@@ -46,10 +84,10 @@ export default function Item() {
               <div className="secondary"><img src={item.subs[2]} alt="secondary" /></div>
             </div>
             <div className="counter w-25 my-3">
-              <input type="number" min={1} defaultValue={1} className="counter-inp" />
+              <input type="number" min={1} value={quantity} className="counter-inp" onChange={(e) => setQuantity(e.target.value)}/>
             </div>
             <div className="item-btns d-flex gap-2 mt-4">
-              <button className="btn btn-dark flex-grow-1 py-2">Add To Cart</button>
+              <button className="btn btn-dark flex-grow-1 py-2" onClick={handleAddToCart}>Add To Cart</button>
               <button className="btn btn-orange flex-grow-1 py-2 text-white" style={{backgroundColor: '#ff7b00'}}>Buy Now</button>
             </div>
           </div>

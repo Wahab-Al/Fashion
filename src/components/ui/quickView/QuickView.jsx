@@ -1,11 +1,41 @@
-import { products } from '../carouselCards/CarouselCards';
+import { products } from '../carouselCards/CarouselCards'
 import './QuickView.css';
-import { Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 export default function QuickView() {
   const items = products.slice(8, 16)
+
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingItemIndex = cart.findIndex(item => item.id === product.id)
+    if (existingItemIndex > -1) {
+      cart[existingItemIndex].quantity += 1
+    } else {
+      cart.push({ ...product, quantity: 1 })
+    }
+    localStorage.setItem('cart', JSON.stringify(cart))
+    Swal.fire({
+      title: 'Added to Cart!',
+      text: `${product.title} has been added to your shopping bag.`,
+      icon: 'success',
+      timer: 2000, 
+      titleColor: 'rgb(255, 123, 0)',
+      showConfirmButton: false,
+      toast: true, 
+      position: 'top-end',
+      timerProgressBar: true,
+      background: '#1a1a1a', 
+      color: '#fff',
+      didOpen: (toast) => {
+        toast.querySelector('.swal2-timer-progress-bar').style.backgroundColor = 'rgba(82, 150, 116, 1)'
+      }
+    })
+
+    window.dispatchEvent(new Event('cartUpdated'))
+  }
+
   return (
     <>
       <div className="trending-Items-bg my-4">
@@ -27,9 +57,14 @@ export default function QuickView() {
                   <div className="d-flex justify-content-between align-items-center">
                     <h5 className="card-title text-uppercase">{product.title}</h5>
                   </div>
-                  <p className="card-text">{product.description}</p>
-                </div>{/* //TODO: write add to cart logic */}
-                <button className='cart-btn-out text-dark'>Cart</button>
+                  <p className="card-text text-truncate">{product.description}</p>
+                </div>  
+                <button 
+                  className='cart-btn-out text-dark' 
+                  onClick={() => addToCart(product)}
+                >
+                  Cart
+                </button>
                 <Link 
                   to={`/item/${product.slug}`} 
                   className='view-btn-out text-decoration-none text-dark text-center pt-1'

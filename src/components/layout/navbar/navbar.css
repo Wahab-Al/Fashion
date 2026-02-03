@@ -87,10 +87,6 @@
   background-color: #dddddd11 !important;
 }
 
-.navbar-brand {
-  color: rgb(255, 123, 0) !important
-}
-
 .searchIcon {
   background-color: #ddddddc2 !important;
 }
@@ -104,13 +100,8 @@
   cursor: pointer;
 }
 
-.active {
+.navbar-brand , .active, .welcome-text, .search-btn:hover, .nav-link:hover , .nav-link:active, .search-btn:focus, .nav-link:focus , .nav-link:focus {
   color: rgb(255, 123, 0) !important
-}
-
-.search-btn:hover, .nav-link:hover , .nav-link:active, .search-btn:focus, .nav-link:focus , .nav-link:focus  {
-  color: rgb(255, 123, 0) !important
-
 }
 
 .navbar-toggler-icon {
