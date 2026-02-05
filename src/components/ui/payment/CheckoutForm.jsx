@@ -19,7 +19,7 @@ const CheckoutForm = ({ totalAmount, cartItems, onSuccess, onCancel }) => {
 
     try {
       //Call backend to create a PaymentIntent
-      const { data } = await axios.post('https://fashion-server-production.up.railway.app/create-payment-intent', {
+      const { data } = await axios.post('https://fashion-server-production.up.railway.app/api/payment/create-payment-intent', {
         amount: totalAmount,
         items: cartItems,
       });
