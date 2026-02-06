@@ -28,6 +28,14 @@
 `Modern Routing`: by `React Router` v7 and a custom `ScrollToTop` logic for enhanced `SPA UX`.
 
 ---
+## Screenshotes: 
+
+![Main Page](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/mainPage.png)
+![Customer Voices](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/customVoices.png)
+![Categories](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/categories.png)
+![Team](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/Team.png)
+![Item View](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/itemView.png)
+![Register](https://raw.githubusercontent.com/Wahab-Al/Fashion/3a7cb854c6ebd4f24330a60a37330eec7307314b/public/screenshots/register.png)
 
 ## License: 📄
 MIT License

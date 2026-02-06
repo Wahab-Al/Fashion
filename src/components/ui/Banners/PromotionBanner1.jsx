@@ -12,7 +12,7 @@ export default function PromotionBanner1() {
               <span className="discount d-block d-md-inline"> 30% Discount</span>
             </h2>
             <p className="text-muted">Visit our shop to see amazing creations from our designers.</p>
-            <button className='btn btn-dark rounded-pill px-4 py-2'>Shop Now</button>
+            <button className='btn promotion-banner-btn rounded-pill px-4 py-2'>Shop Now</button>
           </div>
 
           <div className="promotionImgDiv mt-4 mt-md-0">
