@@ -1,3 +1,5 @@
+![Fashion Flow Typing](https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=25&pause=1000&color=FF006E&width=435&lines=Fashion+Server+v1.0;Elevating+Digital+Style;Smart+Clothing+Management;Designed+for+the+Modern+Trend)
+
 # Fashion - Modern E-Commerce Storefront: 🛍️👗
 **Fashion** a responsive e-commerce web application built with the latest React 19, Bootstrap 5 and Vite. This project has a scalable architecture, centralized data management, and focuses on a seamless shopping experience for the fashion industry, emphasizing speed, scalability, and a refined UI/UX.
 
