@@ -29,7 +29,7 @@ export default function About() {
       
       <div className="services-container py-5">
         
-        {/** Start Team section */}
+
         <section className="team-section py-5">
             <div className="container">
                 <div className="text-center mb-5">
@@ -42,12 +42,12 @@ export default function About() {
                         <div className="team-img-wrapper">
                         <img src={member.img} alt={member.name} className="img-fluid" />
                         
-                        {/*   name & position    */}
+
                         <div className="team-info-box shadow-sm">
                             <h5 className="fw-bold mb-1">{member.name}</h5>
                             <p className="text-muted small mb-3">{member.role}</p>
                             
-                            {/* social media */}
+
                             <div className="team-socials">
                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                             <a href="#"><i className="fab fa-twitter"></i></a>
@@ -62,14 +62,13 @@ export default function About() {
                 </div>
             </div>
         </section>
-        {/** End Team section */}
-        {/** Start Capabilities section */}
+
         <section className="features-section py-5 position-relative overflow-hidden">
-          {/* Background Overlay Layer */}
+
           <div className="features-bg-overlay"></div>
           <div className="container position-relative z-2 py-5">
             <div className="row g-5">
-              {/* Start: Column 1 */}
+
               <div className="col-lg-6">
                 <div className="row g-4">
                   <div className="col-12 feature-item d-flex align-items-start">
@@ -77,9 +76,9 @@ export default function About() {
                       <i className="bi bi-box-seam text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">Smart Fleet Management</h4>
+                      <h4 className="text-white fw-bold h5">Fast & Secure Shipping</h4>
                       <p className="text-light opacity-75 small">
-                        Optimize your operations with real-time tracking and automated reporting systems designed for modern logistics.
+                        Optimize your delivery experience with real-time order tracking and automated notifications designed for modern e-commerce logistics.
                       </p>
                     </div>
                   </div>
@@ -88,9 +87,9 @@ export default function About() {
                       <i className="bi bi-hourglass-split text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">Real-time Analytics</h4>
+                      <h4 className="text-white fw-bold h5">Mobile-First Shopping</h4>
                       <p className="text-light opacity-75 small">
-                        Gain instant insights into driver behavior and fuel consumption to reduce costs and increase overall efficiency.
+                        Access your entire shopping cart and profile from any mobile device with our seamless application synchronization features.
                       </p>
                     </div>
                   </div>
@@ -99,16 +98,15 @@ export default function About() {
                       <i className="bi bi-graph-up-arrow text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">Custom Reporting Tools</h4>
+                      <h4 className="text-white fw-bold h5">Personalized Style Analytics</h4>
                       <p className="text-light opacity-75 small">
-                        Generate uniquely designed data visualizations that help you make informed decisions for your business growth.
+                        Gain instant insights into your style preferences and shopping habits to discover curated collections that increase your wardrobe's efficiency.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* End: Column 1 */}
-              {/* Start: Column 2 */}
+
               <div className="col-lg-6">
                 <div className="row g-4">
                   <div className="col-12 feature-item d-flex align-items-start">
@@ -116,9 +114,9 @@ export default function About() {
                       <i className="bi bi-phone text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">Mobile First Integration</h4>
+                      <h4 className="text-white fw-bold h5">Advanced Payment Security</h4>
                       <p className="text-light opacity-75 small">
-                        Access your entire dashboard from any mobile device with our seamless application synchronization features.
+                        Utilize industry-standard encryption and secure payment gateways to ensure the highest safety standards for your personal and financial data.
                       </p>
                     </div>
                   </div>
@@ -127,9 +125,9 @@ export default function About() {
                       <i className="bi bi-shield-check text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">Advanced Safety Sensors</h4>
+                      <h4 className="text-white fw-bold h5">Custom Order Management</h4>
                       <p className="text-light opacity-75 small">
-                        Utilize vast collections of sensor data to ensure the highest safety standards for your drivers and cargo.
+                        Access uniquely designed dashboards that help you manage your orders and returns, helping you make informed decisions for your personal style growth.
                       </p>
                     </div>
                   </div>
@@ -138,26 +136,25 @@ export default function About() {
                       <i className="bi bi-gear text-orange fs-3"></i>
                     </div>
                     <div>
-                      <h4 className="text-white fw-bold h5">High Quality Hardware</h4>
+                      <h4 className="text-white fw-bold h5">Premium Quality Materials</h4>
                       <p className="text-light opacity-75 small">
-                        Experience unmatched durability with industrial-grade telematics hardware built to perform in the harshest conditions.
+                        Experience unmatched durability with high-grade fabrics and materials built to perform and maintain their look in the harshest daily conditions.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* End: Column 2 */}
+
             </div>
           </div>
         </section>
-        {/** End Capabilities section */}
-        {/** Start services section */}
+
         <div className="container">
           <div className="services-header text-center mb-5">
-            <h2 className="main-title fw-bold">WHAT WE <span className="highlight" style={{ color: '#ff7b00' }}>OFFERING</span></h2>
+            <h2 className="main-title fw-bold">WHAT WE <span className="highlight" style={{ color: '#ff7b00' }}>OFFER</span></h2>
           </div>
           <div className="row g-4 justify-content-center">
-            {/* 1. Call Us Anytime */}
+
             <div className="col-lg-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="row g-0 align-items-center h-100">
@@ -171,13 +168,13 @@ export default function About() {
                   <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title fw-bold m-0">Call Us Anytime</h5>
-                      <p className="card-text text-muted small mt-2">support team is available 24/7 to answer your whenever you need it.</p>
+                      <p className="card-text text-muted small mt-2">support team is available 24/7 to answer your qustions whenever you need it.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* 2. Free Shipping */}
+
             <div className="col-lg-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="row g-0 align-items-center h-100">
@@ -200,7 +197,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            {/* 3. Free Returns */}
+
             <div className="col-lg-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="row g-0 align-items-center h-100">
@@ -215,13 +212,13 @@ export default function About() {
                   <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title fw-bold m-0">Free Returns</h5>
-                      <p className="card-text text-muted small mt-2">30 days for a full, hassle-free refund, Your satisfaction is our priority.</p>
+                      <p className="card-text text-muted small mt-2">30 days for a full, hassle-free refund. Your satisfaction is our priority.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* 4. Secured Payments */}
+
             <div className="col-lg-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="row g-0 align-items-center h-100">
@@ -244,7 +241,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/** End services section */}
+
       </div>
     </>
   );
