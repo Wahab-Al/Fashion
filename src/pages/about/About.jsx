@@ -9,7 +9,7 @@ export default function About() {
   const team = [
         {
         name: "Wahab",
-        role: "Founder & CEO & developer",
+        role: "Founder & developer",
         img: Manager
         },
         {

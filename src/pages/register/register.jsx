@@ -9,7 +9,7 @@ export default function Register() {
     const [error, setError] = useState('')
 
     const [user, setUser] = useState({
-        name:'', surname:'', email:'', password: '', zipCode: '', city:'', state:''
+        name:'', surname:'', email:'', password: '', zipCode: '', city:'', street:'', state:''
     })
     const navigate = useNavigate()
     const handleInputChange = (e)=>{
@@ -43,7 +43,7 @@ export default function Register() {
         // navigate to login page:
         navigate('/login')
         // rest inputs: 
-        setUser({ name:'', surname:'', email:'', password: '', zipCode: '', city:'', state:''})
+        setUser({ name:'', surname:'', email:'', password: '', zipCode: '', city:'', street:'', state:''})
         console.log(`${JSON.stringify(userWithId)} is registered`)
     }
 
@@ -85,9 +85,14 @@ export default function Register() {
                         </div>
                         {/* state */}
                         <div className="mb-3">
+                            <label htmlFor="state" className="form-label">Street</label>
+                            <input type="text" className="form-control inp-bg" id="state" required placeholder="Enter State" value={user.street} onChange={e => setUser({...user, street: e.target.value.toLowerCase()})}/>
+                        </div>
+                        {/* state */}
+                        <div className="mb-3">
                             <label htmlFor="state" className="form-label">State</label>
                             <input type="text" className="form-control inp-bg" id="state" required placeholder="Enter State" value={user.state} onChange={e => setUser({...user, state: e.target.value.toLowerCase()})}/>
-                        </div>
+                        </div> 
                         {/* Email */}
                         <div className="mb-3">
                             <label htmlFor="email" className="form-label">Email address</label>
