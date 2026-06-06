@@ -1,4 +1,4 @@
-import WomanBrands from '../../../assets/img/Banners/wonan-brands.jpg'
+import WomanBrands from '../../../assets/img/banners/wonan-brands.jpg'
 import './DiscountBanner.css'
 import DiscountBennerHelper from './DiscountBannerHelper'
 
