@@ -1,4 +1,4 @@
-import SuitImg from '../../../assets/img/Banners/suit.jpg'
+import SuitImg from '../../../assets/img/banners/suit.jpg'
 import './DiscountBanner.css'
 import DiscountBennerHelper from './DiscountBannerHelper'
 
