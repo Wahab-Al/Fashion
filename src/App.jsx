@@ -7,8 +7,8 @@ import CarouselCards from './components/ui/carouselCards/CarouselCards'
 import WhyFashion from './components/ui/whyFashion/whyFashion'
 import Footer from './components/layout/Footer'
 import MainI from './components/layout/main/MainI'
-import PromotionBanner1 from './components/ui/Banners/PromotionBanner1'
-import PromotionBanner2 from './components/ui/Banners/PromotionBanner2'
+import MensDiscountBanner from './components/ui/Banners/MensDiscountBanner'
+import WomenDiscountBanner from './components/ui/Banners/WomenDiscountBanner'
 import Premium from './components/ui/Premium/Premium'
 import Promo from './components/ui/promo/Promo'
 import Customer from './components/ui/customer/Customer'
@@ -54,9 +54,9 @@ function App() {
               <QuickView />
               <Grid />
               <CarouselCards />
-              <PromotionBanner1 />
+              <MensDiscountBanner />
               <Promo />
-              <PromotionBanner2 />
+              <WomenDiscountBanner />
               <Premium />
               <Customer />
               <WhyFashion />

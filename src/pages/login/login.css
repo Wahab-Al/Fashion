@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../../assets/img/Auth_img/loginbackgroundimg.jpg'); 
+  background: url('../../assets/img/auth_img/loginbackgroundImg.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
