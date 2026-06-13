@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import { userRegister } from '../../apis/authentication/authApi'
 import Swal from 'sweetalert2'
+import { useAuth } from '../../context/AuthContext'
 
 
 export default function Register(){
@@ -15,6 +16,8 @@ export default function Register(){
 
     const navigate = useNavigate()
 
+    const { login } = useAuth()
+
     const handleSubmit = async (e)=>{
         e.preventDefault()
         setError('')
@@ -23,7 +26,7 @@ export default function Register(){
             const response = await userRegister(user)
             const token = response.data.data.token
 
-            document.cookie = `token=${token}; path:/; secure; samesite=strict` //TODO you can remove secure when you use http then add it in production
+            login(response.data.data.user, response.data.data.token)
 
             await Swal.fire({
                 icon: 'success',

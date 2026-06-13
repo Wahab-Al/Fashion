@@ -43,7 +43,7 @@ function App() {
           <div className="spinner-border custom-spinner" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
-          <h5 className="mt-3 fw-light text-secondary">Getting things ready...</h5>
+          <h5 className="mt-3 fw-light text-secondary">Getting ready...</h5>
         </div>
       }>
         <Routes>
