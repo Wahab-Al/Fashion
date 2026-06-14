@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router'
 import './index.css'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 // import Satisfy of Google Fonts
 import "@fontsource/satisfy";
@@ -29,10 +30,12 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </BrowserRouter>
-  </StrictMode>,
+    <HelmetProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </BrowserRouter>
+    </HelmetProvider>
+  </StrictMode>
 )

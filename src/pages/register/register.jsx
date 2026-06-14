@@ -6,6 +6,9 @@ import { useState } from 'react'
 import { userRegister } from '../../apis/authentication/authApi'
 import Swal from 'sweetalert2'
 import { useAuth } from '../../context/AuthContext'
+import { Helmet } from 'react-helmet-async'
+
+
 
 
 export default function Register(){
@@ -43,6 +46,10 @@ export default function Register(){
 
     return (
         <>
+            <Helmet>
+                <title>Create Account Fashion Store</title>
+                <meta name="description" content="Create your Fashion Store account and start shopping." />
+            </Helmet>
             <NavbarBackground img={navBack} />
             <main className='main-register-page'>
                 <div className="container py-3 register__form">

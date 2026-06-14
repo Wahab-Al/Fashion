@@ -3,10 +3,17 @@ import { Link } from 'react-router-dom';
 import NavbarBackground from '../../components/layout/navbar/navbarBackground/NavbarBackground';
 import errorBack from '../../assets/img/errorBack.jpg'
 import './notFound.css'
+import { Helmet } from 'react-helmet-async'
+
+
 
 const NotFound = () => {
   return (
     <>
+      <Helmet>
+        <title>404 Not Found Fashion Store</title>
+        <meta name="description" content="Page not found." />
+      </Helmet>
       <NavbarBackground img={errorBack} />
       <div className="container error-container vh-100 d-flex align-items-center justify-content-center text-center">
         <div>

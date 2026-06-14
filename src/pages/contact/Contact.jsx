@@ -2,9 +2,17 @@
 import navBack from '../../assets/img/hat.jpg'
 import NavbarBackground from '../../components/layout/navbar/navbarBackground/NavbarBackground'
 import './Contact.css'
+import { Helmet } from 'react-helmet-async'
+
+
+
 export default function Contact() {
   return (
     <>
+      <Helmet>
+        <title>Contact Us Fashion Store</title>
+        <meta name="description" content="Get in touch with Fashion Store for any questions or support." />
+      </Helmet>
       <NavbarBackground img={navBack}/>
       <div className="contact-main">
         <h2 className='text-center my-4'>You Find Our <span>Location</span></h2>

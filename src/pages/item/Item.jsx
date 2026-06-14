@@ -8,6 +8,9 @@ import { products } from '../../components/ui/carouselCards/CarouselCards'
 import Swal from 'sweetalert2'
 import { useState } from 'react'
 import { useAuth } from '../../context/AuthContext'
+import { Helmet } from 'react-helmet-async'
+
+
 
 
 //#region convert rating from number to stars icon 
@@ -96,6 +99,34 @@ export default function Item() {
 
   return (
     <>
+      <Helmet>
+        <title>{item.title} Fashion Store</title>
+        <meta name="description" content={item.description} />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": item.title,
+              "image": item.main,
+              "description": item.description,
+              "offers": {
+                "@type": "Offer",
+                "price": item.price,
+                "priceCurrency": "EUR",
+                "availability": item.number_in_stock > 0 
+                  ? "https://schema.org/InStock" 
+                  : "https://schema.org/OutOfStock"
+              },
+              ...(item.rating > 0 && {
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": item.rating,
+                  "bestRating": 5
+                }
+              })
+            })}
+          </script>
+      </Helmet>
       <NavbarBackground img={navBack} />
       <div className="container item py-5">
         <div className="row item-wrapper align-items-center p-4">

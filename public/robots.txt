@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fashion-storefront.netlify.app/sitemap.xml
