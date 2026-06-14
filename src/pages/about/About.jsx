@@ -4,6 +4,7 @@ import Manager from '../../assets/img/Team/Manager.jpg'
 import Designer from '../../assets/img/Team/Designer3.jpg'
 import Marketing from '../../assets/img/Team/Marketing.jpg'
 import './About.css'
+import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   const team = [
@@ -25,6 +26,10 @@ export default function About() {
     ];
   return (
     <>
+      <Helmet>
+        <title>About Us Fashion Store</title>
+        <meta name="description" content="Learn about Fashion Store and our mission to bring you the best styles." />
+      </Helmet>
       <NavbarBackground img={navBack} />
       
       <div className="services-container py-5">

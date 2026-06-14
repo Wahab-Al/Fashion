@@ -3,11 +3,16 @@ import collection1 from '../../../assets/img/top_header/collection/wom-with-bag.
 import collection2 from '../../../assets/img/top_header/collection/man-complete-body.png'
 import collection3 from '../../../assets/img/top_header/collection/kids.png'
 import topHeader from '../../../assets/img/top_header/woman-suit.jpg'
+import { Helmet } from 'react-helmet-async'
 
 import './main.css'
 export default function MainI() {
   return (
     <>
+        <Helmet>
+          <title>Fashion Store</title>
+          <meta name="description" content="Shop the latest fashion trends — clothing, accessories, and more." />
+        </Helmet>
         <div className='topHeader-bg'>
           <div id="carouselExampleAutoplaying" className="carousel slide carousel-left-topHeader" data-bs-ride="carousel">
               <div className="carousel-inner">

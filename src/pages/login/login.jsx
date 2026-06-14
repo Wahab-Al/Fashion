@@ -6,6 +6,10 @@ import { useNavigate, Link, useLocation } from 'react-router';
 import { userLogin } from '../../apis/authentication/authApi';
 import Swal from 'sweetalert2';
 import { useAuth } from '../../context/AuthContext';
+import { Helmet } from 'react-helmet-async'
+
+
+
 
 
 export default function Login() {
@@ -44,6 +48,10 @@ export default function Login() {
 
     return (
         <>
+            <Helmet>
+                <title>Sign In Fashion Store</title>
+                <meta name="description" content="Sign in to your Fashion Store account." />
+            </Helmet>
             <NavbarBackground img={backImg}/>
             <main className='main-login-page'>
                 <div className="container py-3 login__form-container">
