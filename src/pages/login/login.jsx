@@ -2,7 +2,7 @@ import { useState } from 'react';
 import backImg from '../../assets/img/About.jpg'
 import NavbarBackground from '../../components/layout/navbar/navbarBackground/NavbarBackground';
 import './login.css'; 
-import { useNavigate, Link } from 'react-router';
+import { useNavigate, Link, useLocation } from 'react-router';
 import { userLogin } from '../../apis/authentication/authApi';
 import Swal from 'sweetalert2';
 import { useAuth } from '../../context/AuthContext';
@@ -17,15 +17,15 @@ export default function Login() {
     
     const { login } = useAuth()
 
+    const location = useLocation()
+    const from = location.state?.from || '/'
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
 
         try {
             const response = await userLogin(user)
-            const token = response.data.data.token
-
-            document.cookie = `token=${token}; path=/; samesite=lax`
             login(response.data.data.user, response.data.data.token)
             
             await Swal.fire({
@@ -35,11 +35,12 @@ export default function Login() {
                 showConfirmButton: false
             })
 
-            navigate('/')
+            navigate(from)
         } catch (err) {
             setError(err.response?.data?.error || 'Invalid email or password')
         }
     }
+
 
     return (
         <>
