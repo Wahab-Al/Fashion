@@ -3,10 +3,12 @@ import NavbarBackground from '../../components/layout/navbar/navbarBackground/Na
 import './item.css'
 import navBack from '../../assets/img/kidsFashion.jpg'
 
-import { useParams } from 'react-router'
+import { useParams, useNavigate } from 'react-router'
 import { products } from '../../components/ui/carouselCards/CarouselCards'
 import Swal from 'sweetalert2'
 import { useState } from 'react'
+import { useAuth } from '../../context/AuthContext'
+
 
 //#region convert rating from number to stars icon 
 const renderStars = (rating) => {
@@ -68,6 +70,30 @@ export default function Item() {
     })
   }
 
+  const { user } = useAuth()
+  const navigate = useNavigate()
+
+  const handleBuyNow = () => {
+    if(!user){
+      navigate('/login', { state: { from: `/item/${item.slug}` } })
+      return
+    }
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || []
+    const existingItemIndex = cart.findIndex(i => i.id === item.id)
+    const qtyToAdd = parseInt(quantity)
+
+    if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += qtyToAdd
+    } else {
+        cart.push({ ...item, quantity: qtyToAdd })
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart))
+    window.dispatchEvent(new Event('cartUpdated'))
+    navigate('/cart')
+  }
+
   return (
     <>
       <NavbarBackground img={navBack} />
@@ -88,7 +114,13 @@ export default function Item() {
             </div>
             <div className="item-btns d-flex gap-2 mt-4">
               <button className="btn btn-dark flex-grow-1 py-2" onClick={handleAddToCart}>Add To Cart</button>
-              <button className="btn btn-orange flex-grow-1 py-2 text-white" style={{backgroundColor: '#ff7b00'}}>Buy Now</button>
+              <button 
+                  className="btn btn-orange flex-grow-1 py-2 text-white" 
+                  style={{backgroundColor: '#ff7b00'}}
+                  onClick={handleBuyNow}
+              >
+                  Buy Now
+              </button>
             </div>
           </div>
           {/* End: Image Section */}
