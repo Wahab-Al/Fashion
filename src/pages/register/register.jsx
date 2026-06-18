@@ -27,9 +27,8 @@ export default function Register(){
 
         try {
             const response = await userRegister(user)
-            const token = response.data.data.token
 
-            login(response.data.data.user, response.data.data.token)
+            login(response.data.data.user)
 
             await Swal.fire({
                 icon: 'success',

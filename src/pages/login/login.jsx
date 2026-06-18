@@ -30,7 +30,7 @@ export default function Login() {
 
         try {
             const response = await userLogin(user)
-            login(response.data.data.user, response.data.data.token)
+            login(response.data.data.user)
             
             await Swal.fire({
                 icon: 'success',
