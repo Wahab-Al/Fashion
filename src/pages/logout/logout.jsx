@@ -5,7 +5,6 @@ export default function Logout() {
     const navigate = useNavigate()
 
     useEffect(()=> {
-        //localStorage.removeItem('token') handling soon 
         localStorage.removeItem('currentUser')
         window.dispatchEvent(new Event('userLoggedOut'))
 
